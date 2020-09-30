@@ -15,6 +15,7 @@ int main (int argc, char *_argv[])
     cout << myVector.size() << endl;
     cout << myVector.at(0) << endl;
     cout << myVector[0] << endl;
-    myVector[1] = value;
+    myVector[1] = 9;
+    cout << myVector[1] << endl;
     return 0;
 }

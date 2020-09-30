@@ -10,10 +10,11 @@ class Vector {
         Vector();
         virtual ~Vector();
         int capacity() const;
-        int size();
+        const int size();
         void push_back(int value);
-        int at(int position);    
-        int operator[] (int pos);
-        const int operator[] (int pos) const;
+        int& at(int position);    
+        const int& at(int pos) const;
+        int& operator[] (int pos);
+        const int& operator[] (int pos) const;
 };
 #endif
