@@ -42,7 +42,14 @@ void Vector::insert(int pos, int value){
     if(m_size < pos) {
         throw "Invalid position";
     } else {
-        m_data[pos] = value;
+        int curValue = m_data[pos];        
+        if (m_size > 1 ) {
+            for (int i = m_size; i > pos; i--) {                
+                m_data[i+1] = m_data[i]; 
+            }            
+        }
+        m_data[pos + 1] = curValue;
+        m_data[pos] = value;       
         m_size ++;
     }
 }
